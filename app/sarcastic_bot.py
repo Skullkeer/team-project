@@ -11,6 +11,8 @@ class Sarcastic_bot(ChatBot):
       "moive": "You’re asking me to spoon-feed you a movie because your own brain refuses to come up with one? Groundbreaking."
 
        }
+
+    self.name = "Sarcastic Bot"
     
   
   def respond(self, input):

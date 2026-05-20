@@ -1,23 +1,22 @@
 from flask import Flask, render_template, request
 from factory import create_bot
+from event_manager import EventManager
 
 app = Flask(__name__)
+eman = EventManager()
 
-h_bot = create_bot("help")
-s_bot = create_bot("sarc")
-r_bot = create_bot("rand")
+eman.attatch(create_bot("help"))
+eman.attatch(create_bot("sarc"))
+eman.attatch(create_bot("rand"))
 
 @app.route("/", methods=["GET", "POST"])
 def home_page():
-    result_h = None
-    result_s = None
-    result_r = None
+    responses = {}
 
     if request.method == "POST":
-        value = request.form["user_input"]
-        result_h = h_bot.respond(value)
-        result_s = s_bot.respond(value)
-        result_r = r_bot.respond(value)
+        msg = request.form["user_input"]
+        responses = eman.notify(msg)
+    return render_template("template.html", responses = responses)
 
 
 

@@ -12,6 +12,8 @@ class Random_bot(ChatBot):
 
        }
     
+    self.name = "Random Bot"
+
   def respond(self, input):
     if input.lower() in self.personality:
       return self.personality[input.lower()]

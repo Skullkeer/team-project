@@ -11,6 +11,8 @@ class Helpful_bot(ChatBot):
       "movie": "A good movie suggestion, Kiki's delivery service."
 
        }
+
+    self.name = "Helpful Bot"
     
   
   def respond(self, input):
