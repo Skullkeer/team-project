@@ -11,6 +11,14 @@
         <button type="submit">Send</button>
     </form>
 
-    {% if result %}
-        <p>{{ result }}</>
+    {% if result_h %}
+        <p>Helpful Bot: {{ result_h }}</>
+    {% endif %}
+
+    {% if result_s %}
+        <p>Sarcastic Bot: {{ result_s }}</>
+    {% endif %}
+
+    {% if result_r %}
+        <p>Random Bot: {{ result_r }}</>
     {% endif %}

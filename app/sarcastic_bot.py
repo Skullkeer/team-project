@@ -3,7 +3,7 @@ from chatbot import ChatBot
 class Sarcastic_bot(ChatBot):
   def __init__(self):
     self.personality = {
-      "Hello": "Oh, look who decided to grace us with their presence. Welcome to the chat. I’m utterly overwhelmed with excitement.",
+      "hello": "Oh, look who decided to grace us with their presence. Welcome to the chat. I’m utterly overwhelmed with excitement.",
       "good": "Id explain it to you, but I’m afraid I don't have the time or the crayons to make it simple enough",
       "math": "I’d try to explain this to you, but unfortunately, I can't provide you with an understanding of it and a functional brain at the same time.",
       "2+2":"Oh, did your 'rocket science' calculations not pan out? Let me guess, 2+2=5 was a bit too ambitious for you today.",
@@ -14,14 +14,7 @@ class Sarcastic_bot(ChatBot):
     
   
   def respond(self, input):
-    if input in self.personality:
-      print(self.personality[input])
+    if input.lower() in self.personality:
+      return self.personality[input.lower()]
     else: 
-      return f" I wanna sleep."
-
-
-
-
-c = Sarcastic_bot()
-c.respond("math")
-c.respond("hello")
+      return "I wanna sleep."
