@@ -1,13 +1,11 @@
 from flask import Flask, render_template, request
-from helpful_bot import Helpful_bot
-from sarcastic_bot import Sarcastic_bot
-from random_bot import Random_bot
+from factory import create_bot
 
 app = Flask(__name__)
 
-h_bot = Helpful_bot()
-s_bot = Sarcastic_bot()
-r_bot = Random_bot()
+h_bot = create_bot("help")
+s_bot = create_bot("sarc")
+r_bot = create_bot("rand")
 
 @app.route("/", methods=["GET", "POST"])
 def home_page():
