@@ -1,10 +1,12 @@
 class Helpful_bot:
   def __init__(self):
     self.personality = {
-      "Hello": "No I don't like that word",
-      "math": "No english ha take that",
-      "weather": "there is an axe outside, it gonna kill you",
-      "prepare": "My name is Inigo Montoya. You killed my father. Prepare to die"
+      "Hello": "Hello, how are you doing today?",
+      "good": "Thats great, how can I help?",
+      "math": "Math is a great subeject you have any questions",
+      "weather": "It is going to be sunny today, with some clouds.",
+      "2+2": "Ther answer is 4.",
+      "movie": "A good movie suggestion, Kiki's delivery service."
 
        }
     
