@@ -1,17 +1,22 @@
 class Random_bot:
-  def __init__(self, input):
-    self.input = input
-    
+  def __init__(self):
+    self.personality = {
+      "Hello": "No I don't like that word",
+      "math": "No english ha take that",
+      "weather": "there is an axe outside, it gonna kill you",
+      "prepare": "My name is Inigo Montoya. You killed my father. Prepare to die"
 
-  personality = {
-      "hello": "No I don't like that word",
-      "math": "no english ha take that"
        }
     
+  
+  def respond(self, input):
+    if input in self.personality:
+      print(self.personality[input])
+    else: 
+      return f" I wanna sleep."
 
-  def respond(self):
-      return personality.get(self.input, "Unknown Status")
 
 
-c = Random_bot("hello")
-c.respond()
+c = Random_bot()
+c.respond("math")
+c.respond("hello")
