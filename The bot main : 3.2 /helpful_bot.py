@@ -1,4 +1,6 @@
-class Helpful_bot:
+from chatbot import ChatBot
+
+class Helpful_bot(ChatBot):
   def __init__(self):
     self.personality = {
       "Hello": "Hello, how are you doing today?",

@@ -1,4 +1,6 @@
-class Random_bot:
+from chatbot import ChatBot
+
+class Random_bot(ChatBot):
   def __init__(self):
     self.personality = {
       "Hello": "I am currently calculating the exact gravitational pull of your average cup of coffee and testing if a rubber duck could pilot a hovercraft on Mars.",
@@ -16,7 +18,7 @@ class Random_bot:
     else: 
       return f" I wanna sleep."
     
-    
+
 c = Random_bot()
 c.respond("math")
 c.respond("Hello")
