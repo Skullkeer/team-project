@@ -1,7 +1,7 @@
 from chatbot import ChatBot
 
 class Sarcastic_bot(ChatBot):
-  def __init__(self, name):
+  def __init__(self):
     self.personality = {
       "Hello": "Oh, look who decided to grace us with their presence. Welcome to the chat. I’m utterly overwhelmed with excitement.",
       "good": "Id explain it to you, but I’m afraid I don't have the time or the crayons to make it simple enough",
@@ -21,7 +21,7 @@ class Sarcastic_bot(ChatBot):
 
 
 
+
 c = Sarcastic_bot()
 c.respond("math")
 c.respond("hello")
-c.name("willow")
