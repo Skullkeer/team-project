@@ -24,7 +24,7 @@ class Helpful_bot(ChatBot):
       else: 
         return f" I wanna sleep."
     else: 
-        return " "
+        return "random_bool was false"
 
 
 c = Helpful_bot()

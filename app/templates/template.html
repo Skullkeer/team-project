@@ -11,6 +11,8 @@
         <button type="submit">Send</button>
     </form>
 
-    {% for bot_name, response in responses.items() %}
-        <p>{{ bot_name }}: {{ response }}</p>
+    {% for i in chatlog %}
+        {% for bot_name, response in i.items() %}
+            <p>{{ bot_name }}: {{ response }}</p>
+        {% endfor %}
     {% endfor %}

@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 from factory import create_bot
 from event_manager import EventManager
 
+chatlog = []
 app = Flask(__name__)
 eman = EventManager()
 
@@ -16,7 +17,8 @@ def home_page():
     if request.method == "POST":
         msg = request.form["user_input"]
         responses = eman.notify(msg)
-    return render_template("template.html", responses = responses)
+        chatlog.append(responses)
+    return render_template("template.html", responses = responses, chatlog = chatlog)
 
 
 
