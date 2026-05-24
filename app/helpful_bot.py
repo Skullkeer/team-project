@@ -1,4 +1,5 @@
 from chatbot import ChatBot
+import random 
 
 class Helpful_bot(ChatBot):
   def __init__(self):
@@ -16,11 +17,14 @@ class Helpful_bot(ChatBot):
     
   
   def respond(self, input):
-    if input.lower() in self.personality:
-      return self.personality[input.lower()]
+    random_bool = random.choice([True, False])
+    if random_bool == True:
+      if input.lower() in self.personality:
+        return self.personality[input.lower()]
+      else: 
+        return f" I wanna sleep."
     else: 
-      return f" I wanna sleep."
-
+        return " "
 
 
 c = Helpful_bot()

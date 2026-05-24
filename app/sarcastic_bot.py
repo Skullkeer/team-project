@@ -1,5 +1,5 @@
 from chatbot import ChatBot
-
+import random 
 class Sarcastic_bot(ChatBot):
   def __init__(self):
     self.personality = {
@@ -16,7 +16,11 @@ class Sarcastic_bot(ChatBot):
     
   
   def respond(self, input):
-    if input.lower() in self.personality:
-      return self.personality[input.lower()]
+    random_bool = random.choice([True, False])
+    if random_bool == True:
+      if input.lower() in self.personality:
+        return self.personality[input.lower()]
+      else: 
+        return f" I wanna sleep."
     else: 
-      return "I wanna sleep."
+        return " "

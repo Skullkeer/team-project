@@ -1,5 +1,5 @@
 from chatbot import ChatBot
-
+import random
 class Random_bot(ChatBot):
   def __init__(self):
     self.personality = {
@@ -15,11 +15,15 @@ class Random_bot(ChatBot):
     self.name = "Random Bot"
 
   def respond(self, input):
-    if input.lower() in self.personality:
-      return self.personality[input.lower()]
+    random_bool = random.choice([True, False])
+    if random_bool == True:
+      if input.lower() in self.personality:
+        return self.personality[input.lower()]
+      else: 
+        return f" I wanna sleep."
     else: 
-      return f" I wanna sleep."
-    
+        return " "
+
 
 c = Random_bot()
 c.respond("math")
