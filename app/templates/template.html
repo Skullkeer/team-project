@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
     <title>Chat Bots</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <header>
@@ -14,5 +15,6 @@
     {% for i in chatlog %}
         {% for bot_name, response in i.items() %}
             <p>{{ bot_name }}: {{ response }}</p>
+            <p>--------------------</p>
         {% endfor %}
     {% endfor %}

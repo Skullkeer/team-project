@@ -23,7 +23,7 @@ class Random_bot(ChatBot):
       else: 
         return f" I wanna sleep."
     else: 
-        return "random_bool was false"
+        return "Sleeping..."
 
 
 c = Random_bot()

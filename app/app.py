@@ -16,13 +16,10 @@ def home_page():
 
     if request.method == "POST":
         msg = request.form["user_input"]
-        responses = eman.notify(msg)
+        responses.update({"User": msg})
+        responses.update(eman.notify(msg))
         chatlog.append(responses)
     return render_template("template.html", responses = responses, chatlog = chatlog)
-
-
-
-    return render_template("template.html", result_h=result_h, result_s=result_s, result_r=result_r)
 
 if __name__ == "__main__":
     app.run(debug=True)
