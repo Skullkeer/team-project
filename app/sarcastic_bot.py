@@ -1,5 +1,6 @@
 from chatbot import ChatBot
 import random 
+
 class Sarcastic_bot(ChatBot):
   def __init__(self):
     self.personality = {
@@ -23,4 +24,4 @@ class Sarcastic_bot(ChatBot):
       else: 
         return f" I wanna sleep."
     else: 
-        return " "
+        return "random_bool was false"
